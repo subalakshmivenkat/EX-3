@@ -5,6 +5,7 @@
 ## AIM :
 To write a python program to perform sliding window protocol.
 ## ALGORITHM :
+
 1.Start the program.
 2.Get the frame size from the user
 3.To create the frame based on the user request.
@@ -14,6 +15,7 @@ To write a python program to perform sliding window protocol.
 
 ## PROGRAM :
 ## CLIENT:
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -32,14 +34,16 @@ while True:
         if ack:
             print(ack)
             i+=s
+```
 ## SERVER:
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
     print(s.recv(1024).decode())
     s.send("acknowledgement recived from the server".encode())
-    
+```
 ## OUTPUT :
 ## CLIENT:
 ![image](https://github.com/subalakshmivenkat/EX-3/assets/119393477/bb6a5d5e-cdd4-46df-89c5-73b105163739)
